@@ -1,0 +1,693 @@
+/*================================================================================
+	System Name: Sales Management System
+	Version: 0.1 Initial Release
+	Author: Faazy Ahamed
+	Author URL: http://www.faaziahamed.com/
+================================================================================
+  */
+html body {
+    background-color: #1D2B36;
+}
+
+html body .content .content-wrapper {
+    padding: 1.3rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.app-content {
+    background: #F5F7FA;
+    min-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .main-menu {
+        height: 100%;
+    }
+}
+
+.card {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .05);
+}
+
+.card-header {
+    border-bottom: 1px solid #EEE;
+}
+
+.brand-text {
+    font-size: 17.9px;
+    letter-spacing: 0 !important;
+    padding-left: 0px !important;
+}
+
+.navbar-dark, .navbar-dark.navbar-horizontal {
+    background: #1D2B36;
+}
+
+.main-menu.menu-dark .navigation {
+    background: #1D2B36;
+}
+
+footer.footer-dark {
+    background: #1D2B36;
+    color: #FFF;
+}
+
+.main-menu.menu-dark .navigation > li.open > ul {
+    background: #162029;
+}
+
+.main-menu.menu-dark .navigation > li ul .active > a {
+    background-color: #0B1115;
+}
+
+/*.header-navbar .navbar-container ul.nav li a.nav-link-label {*/
+/*padding: 1.2rem 0 1rem .8rem;*/
+/*}*/
+
+/*.header-navbar .navbar-container ul.nav li a.dropdown-user-link {*/
+/*padding: .5rem .6rem;*/
+/*}*/
+
+/*.header-navbar .navbar-container ul.nav li a.nav-link-expand, .header-navbar .navbar-container ul.nav li a.nav-link-search {*/
+/*padding: 1.2rem 1rem 0.8rem;*/
+/*}*/
+
+/*.header-navbar {*/
+/*min-height: 2rem;*/
+/*}*/
+
+.header-navbar .navbar-container {
+    height: 2rem;
+}
+
+.header-navbar .navbar-container ul.nav li a.menu-toggle {
+    padding: 1.1rem .8rem 1rem 0.8rem;
+}
+
+.highcharts-contextmenu hr {
+    display: none;
+}
+
+.highcharts-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.well {
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+=================================================================== */
+
+#chart text, .hc-tip, .hc-tip > h2 {
+    font-size: 15px !important;
+}
+
+.hc-tip > h2 {
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.well-sm {
+    padding: 9px;
+    border-radius: 3px;
+}
+
+.card .card-header h2 {
+    float: left;
+    font-size: 16px;
+    /*padding: 10px 0px;*/
+    /*margin: 0px 0px 0px 20px;*/
+}
+
+.card-header {
+    padding: 0.8rem 1rem 0.2rem 1rem;
+    background: #f7f7f8;
+}
+
+.card {
+    border: 1px solid #dbdee0;
+}
+
+.card .card-header h2 i {
+    border-right: 1px solid #dbdee0;
+    /*padding: 12px 0px;*/
+    padding: 12px 6px 0px 10px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    margin: -10px 20px -10px -20px;
+    font-size: 16px;
+}
+
+.card .card-body p.introtext, .card .card-block p.introtext {
+    background: #F9F9F9;
+    margin: -20px -20px 20px -20px;
+    padding: 10px;
+    border-bottom: 1px solid #DBDEE0;
+    /*color: #000000;*/
+    font-size: 13.5px;
+    /*font-weight: 400;*/
+}
+
+.quick-button.small {
+    padding: 15px 0px 1px 0px;
+    font-size: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+    color: #000000;
+    /*padding: .75rem;*/
+    padding: 8px;
+}
+
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting {
+    padding-right: 20px;
+}
+
+/*.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th {*/
+/*border: 1px solid #ddd;*/
+/*}*/
+
+.table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table-striped thead tr.primary:nth-child(odd) th {
+    background-color: #00AEB1;
+    color: white;
+    border-color: #009DA0;
+    border-top: 1px solid #009DA0;
+    text-align: center;
+
+}
+
+.table.table-sm td, .table.table-sm th {
+    padding: .6rem;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #f9f9f9;
+}
+
+.product_link, .customer_details_link, .supplier_details_link, .product_link2 td:first-child, .product_link2 td:nth-child(2) {
+    cursor: pointer;
+}
+
+.product_link td:first-child,
+.product_link td:nth-child(2),
+.product_link td:last-child,
+.customer_details_link td:first-child,
+.customer_details_link td:last-child,
+.supplier_details_link td:first-child,
+.supplier_details_link td:last-child {
+    cursor: default;
+}
+
+.purchase_link, .transfer_link, .routine_link, .invoice_link, .quote_link, .delivery_link, .return_link, .return_purchase_link, .receipt_link, .payment_link, .payment_link2, .invoice_link2, .purchase_link2, .expense_link2, .transfer_link2, .quote_link2, .row_status, .adjustment_link, .adjustment_link2 {
+    cursor: pointer;
+}
+
+.purchase_link td:first-child,
+.purchase_link td:nth-child(5),
+.purchase_link td:nth-last-child(2),
+.purchase_link td:last-child,
+.transfer_link td:first-child,
+.transfer_link td:nth-last-child(3),
+.transfer_link td:nth-last-child(2),
+.transfer_link td:last-child,
+.invoice_link td:first-child,
+.invoice_link td:last-child,
+.invoice_link td:nth-last-child(2),
+.invoice_link td:nth-child(6),
+.receipt_link td:first-child,
+.receipt_link td:last-child,
+.quote_link td:first-child,
+.quote_link td:nth-last-child(3),
+.quote_link td:nth-last-child(2),
+.quote_link td:last-child,
+.delivery_link td:first-child,
+.delivery_link td:last-child,
+.delivery_link td:nth-last-child(2),
+.delivery_link td:nth-last-child(3),
+.adjustment_link td:first-child,
+.adjustment_link td:last-child,
+.adjustment_link td:nth-last-child(2),
+.routine_link td:last-child,
+.expense_link2 td:last-child {
+    cursor: default;
+}
+
+.order:hover,
+.invoice:hover,
+.quote:hover {
+    cursor: pointer !important;
+}
+
+table td[class*=col-], table th[class*=col-] {
+    position: static;
+    display: table-cell;
+    float: none;
+}
+
+.form-control {
+    padding: .54rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: -webkit-calc(2.65rem - 2px);
+    height: -moz-calc(2.65rem - 2px);
+    height: calc(2.65rem - 2px);
+}
+
+.table > thead > tr > td.warning, .table > tbody > tr > td.warning, .table > tfoot > tr > td.warning, .table > thead > tr > th.warning, .table > tbody > tr > th.warning, .table > tfoot > tr > th.warning, .table > thead > tr.warning > td, .table > tbody > tr.warning > td, .table > tfoot > tr.warning > td, .table > thead > tr.warning > th, .table > tbody > tr.warning > th, .table > tfoot > tr.warning > th {
+    /*background-color: #FFE3DA;*/
+    background-color: #FFF5EF !important;
+}
+
+.table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr.warning:hover > th {
+    background-color: #FFE3DA !important;
+}
+
+.table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
+    padding: 5px;
+}
+
+.totals td {
+    width: 16.666%;
+    font-weight: bold;
+}
+
+label {
+    margin-top: 5px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.card .card-header h2 {
+    color: #00B5B8 !important;
+}
+
+.card-warning {
+    background-color: inherit;
+    border-color: #FFA87D;
+}
+
+.card-warning .card-header {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    font-weight: bold;
+    padding: 0.8rem 1rem 0.5rem 1rem;
+
+}
+
+/*background-color: #fcf8e3;*/
+/*border-color: #faf2cc;*/
+.has-danger > label {
+    color: #d9534f;
+}
+
+.has-success > label {
+    color: #16D39A;
+}
+
+.has-danger .select2-container .select2-selection {
+    border-color: #d9534f !important;
+}
+
+.has-success .select2-container .select2-selection {
+    border-color: #16D39A !important;
+}
+
+.select2-container--classic .select2-selection--single, .select2-container--default .select2-selection--single {
+    height: 35px !important;
+}
+
+.stick {
+    position: fixed;
+    top: 0px;
+}
+
+.custom-file {
+    z-index: 1;
+}
+
+.form-group label:not(:first-child) {
+    font-weight: 400 !important;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.btn-tasks .dropdown-toggle::after {
+    content: '';
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.heading-elements {
+    float: right;
+    top: 0 !important;
+    right: -1px !important;
+}
+
+.heading-elements .btn-tasks .dropdown {
+    border: 1px solid #dbdee0;
+    line-height: 2.3;
+    /*padding-left: 7px;*/
+    font-size: 18px;
+    text-align: center;
+    /*width: 40px !important;*/
+    position: relative;
+}
+
+.heading-elements .btn-tasks .dropdown i {
+    color: #00b5b8 !important;
+}
+
+.btn-tasks .dropdown {
+    margin-left: -5px;
+    margin-top: -1px;
+}
+
+.btn-tasks .dropdown .dropdown-menu .dropdown-item {
+    padding: 0px 15px;
+    width: auto;
+}
+
+.btn-group-sm > .btn, .btn-xs {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .21rem;
+}
+
+.scroll-example {
+    padding: 0 !important;
+    position: relative;
+    border: 0 !important;
+    overflow: auto;
+}
+
+th {
+    white-space: normal !important;
+}
+
+table.dataTables {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .table-responsive .table td:last-child, .table-responsive .table th:last-child {
+        display: none;
+    }
+
+    .table-responsive .reports-table th:last-child, .table-responsive .reports-table td:last-child {
+        display: table-cell !important;
+    }
+
+    .table-responsive .col-md-6.text-left, .table-responsive .col-md-6.text-right {
+        text-align: center !important;
+    }
+
+    .table-responsive .table.dfTable td:last-child, .table-responsive .table.dfTable th:last-child,
+    .modal-body .table-responsive .table th:last-child, .modal-body .table-responsive .table td:last-child {
+        display: table-cell;
+    }
+
+    .order-table th:last-child, .order-table td:last-child {
+        display: table-cell !important;
+    }
+}
+
+.table-responsive {
+    overflow-x: initial;
+}
+
+.dropdown-menu .dropdown-item, .dropdown-menu .dropdown-item a {
+    color: #262626 !important;
+}
+
+.main-menu.menu-dark .navigation > li > ul, .main-menu.menu-dark ul.menu-popout {
+    background: #1d2b36;
+}
+
+.alert[class*=alert-arrow-]:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-left: 8px solid;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left-color: inherit;
+    margin-top: -8px;
+}
+
+.bg-danger {
+    background-color: #DA4453 !important;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container {
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection {
+    background: #eee;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .table-responsive {
+        overflow-x: auto !important;
+    }
+}
+
+.modal-body button.close, .modal-header button.close {
+    margin-top: -11px !important;
+}
+
+.has-danger .help-block, .form-group.error .help-inline {
+    color: #DA4453;
+}
+
+.sname {
+    cursor: pointer;
+}
+
+[class*=" ft-"].ft-xl, [class^=ft-] .ft-xl {
+    font-size: xx-large;
+}
+
+[class*=" ft-"].ft-2x, [class^=ft-] .ft-2x {
+    font-size: 2em;
+}
+
+.table {
+    width: 100% !important;
+}
+
+.table > thead > tr > td.danger, .table > tbody > tr > td.danger, .table > tfoot > tr > td.danger, .table > thead > tr > th.danger, .table > tbody > tr > th.danger, .table > tfoot > tr > th.danger, .table > thead > tr.danger > td, .table > tbody > tr.danger > td, .table > tfoot > tr.danger > td, .table > thead > tr.danger > th, .table > tbody > tr.danger > th, .table > tfoot > tr.danger > th {
+    background-color: #F9E1E4 !important;
+}
+
+#attrTable td, #attrTable .delAttr, #attrTable .attr-remove-all, .pointer {
+    cursor: pointer;
+}
+
+.quick-menu {
+    color: #ffffff;
+    padding: 7px;
+    font-size: 80%;
+    opacity: 0.9;
+    /*min-width: 73px;*/
+    min-width: 100px;
+    height: 80px;
+}
+
+.quick-menu i {
+    margin-right: .1rem;
+}
+
+.quick-menu:hover {
+    opacity: 1;
+    color: #f7f7f8;
+}
+
+.quick-menu span {
+    display: block;
+}
+
+.quick-link div {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1199px) {
+    .hidden-lg-down {
+        display: block !important;
+    }
+}
+
+@media (max-width: 340px) {
+    .customizer.open {
+        width: 340px !important;
+    }
+}
+
+@media (max-width: 400px) and (min-width: 345px) {
+    .customizer.open {
+        width: 380px !important;
+    }
+}
+
+.main-menu.menu-dark {
+    background: #1d2b36;
+}
+
+.bg-gradient-x-lime {
+    background-image: -webkit-gradient(linear, left top, right top, from(#52b315), to(#88e64c));
+    background-image: -webkit-linear-gradient(left, #52b315 0, #88e64c 100%);
+    background-image: -moz-linear-gradient(left, #52b315 0, #88e64c 100%);
+    background-image: -o-linear-gradient(left, #52b315 0, #88e64c 100%);
+    background-image: linear-gradient(to right, #52b315 0, #88e64c 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52b315', endColorstr='#88e64c', GradientType=1);
+}
+
+.modal-title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.modal .modal-body h1, .modal .modal-body h2, .modal .modal-body h3, .modal .modal-body h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal .modal-body h4 {
+    font-size: 1rem;
+}
+
+.btn-group-justified > .btn-group .btn {
+    width: 100%;
+}
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+
+.btn-group-justified > .btn, .btn-group-justified > .btn-group {
+    display: table-cell;
+    float: none;
+    width: 1%;
+}
+
+.popover-content .btn {
+    width: 100%;
+}
+
+.popover-content .btn {
+    margin-bottom: 3px;
+}
+
+.dtFilter-filter-wrapper .dtFilter-filter:first-child {
+    display: block;
+    padding: 3px 0px;
+    color: #333;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+.dtFilter-filter-reset-button {
+    display: none;
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+    /*background: url(../images/loading.gif) no-repeat center;*/
+    /*background-position: 26px 13px;*/
+    border: 0;
+    background-color: #333;
+    padding: 10px 15px;
+    color: #fff;
+    width: auto;
+}
+
+#ajaxCall {
+    display: none;
+    color: #000;
+    background: url(../images/805.gif) no-repeat center #fff;
+    background-size: 100%;
+    border-radius: 25px;
+    top: 2%;
+    right: 2%;
+    position: fixed;
+    width: 51px;
+    height: 50px;
+    z-index: 55555;
+    text-align: center;
+}
+
+#PrRData td:nth-child(3), #PrRData td:nth-child(4), #PrRData td:nth-child(5), #PrRData td:nth-child(6), #PrRData td:nth-child(7) {
+    text-align: right;
+    width: 12%;
+}
+
+.main-menu.menu-dark .navigation > li ul {
+    font-size: 0.9rem;
+}
+
+.main-menu.menu-dark .navigation > li ul li > a {
+    padding: 10px 18px 10px 40px;
+}
+
+.dropdown-item {
+    width: 75%;
+}

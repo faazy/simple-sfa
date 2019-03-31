@@ -30,7 +30,7 @@ class CustomerTest extends TestCase
 
         $customerRepo = new CustomerRepository(new Company());
         $customer = $customerRepo->create($data);
-//dd($customer);
+
         $this->assertInstanceOf(Company::class, $customer);
         $this->assertEquals($data['name'], $customer->name);
         $this->assertEquals($data['email'], $customer->email);

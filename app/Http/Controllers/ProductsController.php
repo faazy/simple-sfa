@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Repositories\CategoriesRepository;
+use App\Http\Requests\ProductRequest;
+use App\Product;
 use App\Repositories\ProductRepository;
 use App\Warehouse;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
 
     /**
-     * @var CategoriesRepository
+     * @var ProductRepository
      */
 
     private $productRepo;
@@ -43,7 +45,7 @@ class ProductsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new prodcutc.
      *
      * @return \Illuminate\Http\Response
      */
@@ -60,12 +62,12 @@ class ProductsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param ProductRequest $request
+     * @return Collection | Product
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        //
+        //Todo Implement the create Product store() method
     }
 
     /**
@@ -76,7 +78,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        //Todo Implement the Product Details View (Charts and PO history of Product)
     }
 
     /**
@@ -87,19 +89,19 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Todo Implement the Subcategory JSON OBJ
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param ProductRequest $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Collection | Product
      */
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
-        //
+        //Todo Implement the Subcategory JSON OBJ
     }
 
     /**
@@ -110,7 +112,7 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Todo Implement the Subcategory JSON OBJ
     }
 
     public function getSubCategories()

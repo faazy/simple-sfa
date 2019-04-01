@@ -11,10 +11,10 @@ use Throwable;
 class SalesRepController extends Controller
 {
     /**
-     * @var CategoriesRepository
+     * @var SalesRepRepository
      */
 
-    private $supplierRepo;
+    private $salesRepRepo;
 
     /**
      * @var Request
@@ -43,7 +43,7 @@ class SalesRepController extends Controller
     }
 
     /**
-     * Show the form modal for creating a new supplier.
+     * Show the form modal for creating a new Sales Rep.
      *
      * @return Response
      * @throws Throwable
@@ -62,7 +62,7 @@ class SalesRepController extends Controller
      */
     public function store(CompanyRequest $request)
     {
-//        $this->authorize('store', CategoryPolicy::class);
+//        $this->authorize('store', SalesRepPolicy::class);
 
         $this->salesRepRepo->create($request->all());
 

@@ -11,7 +11,7 @@ use Throwable;
 class SupplierController extends Controller
 {
     /**
-     * @var CategoriesRepository
+     * @var SupplierRepository
      */
 
     private $supplierRepo;

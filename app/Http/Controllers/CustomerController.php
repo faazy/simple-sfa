@@ -11,7 +11,7 @@ use Throwable;
 class CustomerController extends Controller
 {
     /**
-     * @var CategoriesRepository
+     * @var CustomerRepository
      */
 
     private $customerRepo;
@@ -42,7 +42,7 @@ class CustomerController extends Controller
     }
 
     /**
-     * Show the form modal for creating a new supplier.
+     * Show the form modal for creating a new customer.
      *
      * @return Response
      * @throws Throwable
@@ -61,7 +61,7 @@ class CustomerController extends Controller
      */
     public function store(CompanyRequest $request)
     {
-//        $this->authorize('store', CategoryPolicy::class);
+//        $this->authorize('store', CustomerPolicy::class);
 
         $this->customerRepo->create($request->all());
 

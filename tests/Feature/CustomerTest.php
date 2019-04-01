@@ -18,7 +18,7 @@ class CustomerTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_t_can_create_a_customer()
+    public function test_it_can_create_a_customer()
     {
         $data = [
             'name' => 'Faazi',

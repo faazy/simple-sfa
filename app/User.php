@@ -61,7 +61,7 @@ class User extends Authenticatable
      */
     public function hasPermission($permission)
     {
-        return false;
+        return true;
     }
 
     /**

@@ -22,18 +22,11 @@ use Illuminate\Notifications\Notifiable;
  * @property string|null $remember_token
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property int $stripe_active
- * @property string|null $stripe_id
- * @property string|null $stripe_subscription
- * @property string|null $stripe_plan
  * @property string|null $last_four
- * @property string|null $trial_ends_at
- * @property string|null $subscription_ends_at
  * @property int $confirmed
  * @property string|null $confirmation_code
  * @property string $avatar
  * @property-read string $display_name
- * @property-read mixed $followers_count
  * @property-read bool $has_password
  * @property-read bool $is_admin
  * @property-read \Illuminate\Database\Eloquent\Collection|\Common\Auth\Roles\Role[] $roles
@@ -42,23 +35,18 @@ use Illuminate\Notifications\Notifiable;
  */
 class User extends Authenticatable
 {
-    use Notifiable, FormatsPermissions, Billable;
+    use Notifiable, FormatsPermissions;
 
     protected $guarded = ['id'];
     protected $hidden = ['password', 'remember_token', 'pivot'];
     protected $casts = ['id' => 'integer', 'confirmed' => 'integer'];
     protected $appends = ['display_name', 'has_password'];
-    protected $billingEnabled = true;
+
 
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
 
-        $this->billingEnabled = config('common.site.billing_enabled');
-
-        if ($this->billingEnabled) {
-            $this->with = ['subscriptions.plan.parent'];
-        }
     }
 
     /**
@@ -71,27 +59,6 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'user_role');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function files()
-    {
-        return $this->belongsToMany(FileEntry::class, 'user_file_entry', 'user_id', 'file_entry_id')
-            ->using(UserFileEntry::class)
-            ->withPivot('owner', 'permissions')
-            ->withTimestamps()
-            ->orderBy('user_file_entry.created_at', 'asc');
-    }
-
-    /**
-     * Social profiles this users account is connected to.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function social_profiles()
-    {
-        return $this->hasMany(SocialProfile::class);
-    }
 
     /**
      * Get user avatar.
@@ -154,23 +121,7 @@ class User extends Authenticatable
     {
         $permissions = $this->permissions;
 
-        // merge role permissions
-        foreach ($this->roles as $role) {
-            $permissions = array_merge($role->permissions, $permissions);
-        }
-
-        // merge billing plan permissions
-        if ($this->billingEnabled) {
-            if ($subscription = $this->subscriptions->first()) {
-                $permissions = array_merge($subscription->plan ? $subscription->plan->permissions : [], $permissions);
-            } else if ($freePlan = BillingPlan::where('free', true)->first()) {
-                $permissions = array_merge($freePlan->permissions, $permissions);
-            }
-        }
-
-        if (array_key_exists('admin', $permissions) && $permissions['admin']) return true;
-
-        return array_key_exists($permission, $permissions) && $permissions[$permission];
+        return true;
     }
 
     public function setPermissionsAttribute($value)
